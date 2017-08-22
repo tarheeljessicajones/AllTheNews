@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>News Scraper</title>
+  <style>
+    body{
+      background-color: black;
+    }
+    h1{
+      font-color: white;
+    }
+    #wrapper{
+      width:960px;
+      margin: 0 auto;
+      padding-top: 5%;
+    }
+    .col-md-4{
+      height: 250px;
+      margin-bottom: 100px;
+    }
+    .title{
+      text-align: center;
+      font-color: white;
+    }
+    #articles{
+      display:inline-block;
+      overflow: auto;
+    }
+    #saved{
+      height: 238px;
+      border: 1px solid black;
+      background-color: pink;
+    }
+
+    .bottom{
+      margin: auto;
+      display: block;
+    }
+    textarea, input{
+      display:block;
+      width:100%;
+      background-color: pink;
+    }
+    input{
+      height:36px;
+      font-size: 24px;
+    }
+    textarea{
+      height:200px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="title"><strong>News Scraper</strong></h1>
+      </div>
+      <!-- Add Note -->
+          <div class="col-md-12">
+            <h1 class="title"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></h1>
+            <div id="notes"></div>
+                  <input id="titleinput" name="title" >
+                  <textarea id="bodyinput" name="body"></textarea>
+                  <button data-id="' + data._id + '" id="savenote" class="btn btn-warning bottom">Save Note</button>
+
+          </div>
+      <!-- Articles -->
+          <div class="col-md-12">
+                <br>
+                <br>
+            <div id="articles"></div>
+            <button type="button" id="checknote" class="btn btn-warning bottom">Check For Notes</button>      
+            
+        </div>
+      <!-- Saved Notes -->
+        <div class="col-md-12">
+           <h1 class="title"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></h1>
+           <div id="saved"></div>
+           <button type="button" id="deletenote" class="btn btn-warning bottom">Delete Note</button> 
+        </div>
+    <div class="row">
+    <!-- Scrape button -->
+      <div class="col-md-12">
+        <button type="button" class="btn btn-warning bottom"> <a href="/scrape">Scrape!</button>   
+      </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

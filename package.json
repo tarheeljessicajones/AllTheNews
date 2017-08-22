@@ -1,0 +1,25 @@
+{
+  "name": "allthenews",
+  "version": "1.0.0",
+  "description": "A web app that lets users leave comments on the latest news, scraped from another site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarheeljessicajones/AllTheNews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarheeljessicajones/AllTheNews/issues"
+  },
+  "homepage": "https://github.com/tarheeljessicajones/AllTheNews#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.1"
+  }
+}
